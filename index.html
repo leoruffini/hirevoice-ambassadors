@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hirevoice Ambassadors — Programa de Referidos</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@700,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0B34B7;
+      --blue-light: #3B5FD9;
+      --dark: #0A0A0A;
+      --white: #FFFFFF;
+      --text: #1A1A1A;
+      --text-secondary: #6B7280;
+      --radius: 8px;
+      --max-w: 1080px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Switzer', Arial, Helvetica, sans-serif;
+      line-height: 1.15;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ========================================
+       SECTIONS — BASE
+    ======================================== */
+    .section {
+      padding: 5rem 1.5rem;
+    }
+
+    .section--dark {
+      background: var(--dark);
+      background-image: radial-gradient(ellipse at 60% 50%, rgba(11, 52, 183, 0.6) 0%, rgba(11, 52, 183, 0.2) 40%, transparent 70%);
+      color: var(--white);
+    }
+
+    .section--light {
+      background: var(--white);
+      color: var(--text);
+    }
+
+    .section__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section__label {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .section__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+    }
+
+    /* ========================================
+       ANIMATIONS
+    ======================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========================================
+       CTA BUTTON
+    ======================================== */
+    .btn {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(11, 52, 183, 0.4);
+    }
+
+    .btn--large {
+      font-size: 1.15rem;
+      padding: 1.15rem 3rem;
+    }
+
+    /* ========================================
+       1. HERO
+    ======================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      background: var(--dark);
+      background-image: radial-gradient(ellipse at 60% 50%, rgba(11, 52, 183, 0.6) 0%, rgba(11, 52, 183, 0.2) 40%, transparent 70%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 2rem;
+    }
+
+    .hero__logo svg {
+      height: 28px;
+      width: auto;
+    }
+
+    .hero__logo svg .cls-1 {
+      fill: var(--white);
+    }
+
+    .hero__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero__title {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ========================================
+       2. WHAT IS HIREVOICE
+    ======================================== */
+    .what__subtitle {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 3rem;
+      color: var(--text-secondary);
+    }
+
+    .what-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .what-card {
+      padding: 2rem 0;
+      border-top: 2px solid #E5E7EB;
+    }
+
+    .what-card__number {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .what-card__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .what-card__desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    /* ========================================
+       3. HOW IT WORKS — STEPS
+    ======================================== */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .step__number {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--blue-light);
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    .step__title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step__desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ========================================
+       4. COMMISSIONS — FOCAL SECTION
+    ======================================== */
+    .commissions .section__title {
+      text-align: center;
+    }
+
+    .commission-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .commission-card {
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .commission-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 8px 40px rgba(11, 52, 183, 0.1);
+    }
+
+    .commission-card--featured {
+      border-color: var(--blue);
+      background: linear-gradient(135deg, rgba(11, 52, 183, 0.03) 0%, rgba(11, 52, 183, 0.08) 100%);
+    }
+
+    .commission-card__badge {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .commission-card__percent {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: clamp(4rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .commission-card__period {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .commission-card__desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .commission-card__example {
+      background: #F3F4F6;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .commission-card__example strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .commission-footnote {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========================================
+       5. WHO IT'S FOR
+    ======================================== */
+    .fit-list {
+      list-style: none;
+      margin-top: 2.5rem;
+      max-width: 720px;
+    }
+
+    .fit-list li {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .fit-list li::before {
+      content: '—';
+      color: var(--blue-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ========================================
+       6. WHY RECOMMEND
+    ======================================== */
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .reason {
+      padding: 2rem 0;
+      border-top: 2px solid #E5E7EB;
+    }
+
+    .reason__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .reason__desc {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    /* ========================================
+       7. FINAL CTA
+    ======================================== */
+    .cta-final {
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+
+    .cta-final .section__title {
+      margin-bottom: 1rem;
+    }
+
+    .cta-final__text {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.2s;
+    }
+
+    .footer a:hover { color: var(--white); }
+
+    .footer svg {
+      height: 18px;
+      width: auto;
+      vertical-align: middle;
+      margin-right: 0.25rem;
+    }
+
+    .footer svg .cls-1 {
+      fill: rgba(255, 255, 255, 0.35);
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+    @media (max-width: 768px) {
+      .section { padding: 3.5rem 1.25rem; }
+
+      .hero { padding: 6rem 1.25rem 3rem; min-height: 90vh; }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .commission-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .what-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .reasons {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .commission-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .step__number { font-size: 3.5rem; }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hero__title { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="hero">
+    <nav class="hero__nav">
+      <div class="hero__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="195 339 802 220"><defs><style>.cls-1{fill:#0b34b7;}</style></defs><polygon class="cls-1" points="283.94 404.09 225.87 404.09 225.87 350.84 199.82 350.84 199.82 482.04 225.87 482.04 225.87 425.32 283.94 425.32 283.94 482.04 309.79 482.04 309.79 350.84 283.94 350.84 283.94 404.09"/><rect class="cls-1" x="329.48" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="329.48" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M396.62,393.67v-15.05h-24.7v103.41h24.7v-54.99c0-17.17,8.3-28.36,27.01-28.36,4.44,0,8.1.39,11.38,1.35v-21.42c-1.93-1.74-5.79-2.89-10.03-2.89-11.19,0-21.61,5.59-28.36,17.94Z"/><path class="cls-1" d="M486.92,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM485.95,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><polygon class="cls-1" points="602.88 482.04 640.11 378.62 614.84 378.62 590.91 451.55 588.41 462.75 585.71 451.55 561.78 378.62 535.16 378.62 572.39 482.04 602.88 482.04"/><rect class="cls-1" x="753.37" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="753.37" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M840.58,464.48c-15.63,0-24.12-12.16-24.12-33.96s8.1-34.34,23.35-34.34c10.42,0,18.52,5.59,20.84,19.1h24.7c-3.47-26.43-22-39.55-45.53-39.55-29.71,0-48.81,19.68-48.81,54.79s18.52,54.41,49.01,54.41c23.35,0,41.48-12.15,46.11-38.01h-24.89c-2.51,11.77-10.03,17.56-20.64,17.56Z"/><path class="cls-1" d="M944,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM943.03,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><path class="cls-1" d="M690.96,375.5c-20.78,0-36.5,9.39-44.25,26.76-3.53,7.83-5.44,17.3-5.44,28.27s1.88,19.94,5.4,27.73c1.3,2.88,2.05,6.02,2.07,9.18.03,4.48-1.21,8.93-3.79,12.78h0c-4.86,7.27-12.57,12.12-21.22,13.42-1.89.28-3.8.75-5.75,1.41-8.74,2.97-15.69,9.92-18.48,18.71-7.76,24.42,14.47,46.58,38.9,38.69,8.77-2.83,15.76-9.77,18.63-18.53,2.24-6.84,2.13-13.5.27-19.39-.9-2.86-1.41-5.85-1.07-8.83,1.19-10.66,8.28-18.19,17-20.73,2.93-.85,6.03-1.03,9.05-.6,2.74.38,5.6.58,8.57.58,21.5,0,37.61-10.17,44.97-28.79,2.94-7.33,4.52-15.98,4.52-25.85,0-33.96-18.91-54.79-49.39-54.79Z"/></svg></div>
+    </nav>
+    <div class="hero__inner">
+      <h1 class="hero__title reveal">Hirevoice<br>Ambassadors</h1>
+      <p class="hero__subtitle reveal">Recomienda la mejor tecnología de entrevistas con IA. Gana comisiones recurrentes por cada cliente que traigas.</p>
+      <a href="mailto:leo@hirevoice.com?subject=Ambassador%20Program" class="btn reveal">Quiero ser Ambassador</a>
+    </div>
+  </section>
+
+  <!-- ===== 2. QUÉ ES HIREVOICE ===== -->
+  <section class="section section--light what">
+    <div class="section__inner">
+      <p class="section__label reveal">El producto</p>
+      <h2 class="section__title reveal">Qué es Hirevoice</h2>
+      <p class="what__subtitle reveal">Un agente de entrevistas conversacionales con IA para cualquier tipo de rol.</p>
+      <div class="what-cards">
+        <div class="what-card reveal">
+          <div class="what-card__number">01</div>
+          <h3 class="what-card__title">Entrevistas reales, no cuestionarios</h3>
+          <p class="what-card__desc">Conversaciones adaptativas por Google Meet, Teams o teléfono. Preguntas de seguimiento, profundización, hasta 40 minutos. No hay dos entrevistas iguales.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">02</div>
+          <h3 class="what-card__title">Informes completos para el reclutador</h3>
+          <p class="what-card__desc">Puntuaciones por competencia, explicaciones detalladas de cada habilidad hard y soft evaluada, y alertas de inconsistencias.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">03</div>
+          <h3 class="what-card__title">White collar y blue collar</h3>
+          <p class="what-card__desc">Desde desarrolladores senior hasta perfiles operativos de alto volumen. Un solo cliente está cerrando 6.000 posiciones al año con Hirevoice.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">04</div>
+          <h3 class="what-card__title">Integración inmediata</h3>
+          <p class="what-card__desc">Compatible con cualquier ATS. Contacto con candidatos por email, WhatsApp o enlace directo. Operativo en días, no meses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. CÓMO FUNCIONA ===== -->
+  <section class="section section--dark">
+    <div class="section__inner">
+      <p class="section__label reveal">El proceso</p>
+      <h2 class="section__title reveal">Cómo funciona</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Recomienda</h3>
+          <p class="step__desc">Presenta Hirevoice a empresas de tu red que contraten con volumen. Solo necesitas hacer la intro.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__number">2</div>
+          <h3 class="step__title">Nosotros cerramos</h3>
+          <p class="step__desc">Nuestro equipo se encarga de la demo, el piloto y el cierre. Tú decides cuánto te involucras.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Cobra cada mes</h3>
+          <p class="step__desc">Recibe comisiones mensuales sobre el consumo real del cliente. Sin límite de referrals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. COMISIONES ===== -->
+  <section class="section section--light" id="comisiones">
+    <div class="section__inner">
+      <p class="section__label reveal" style="text-align:center;">Lo que ganas</p>
+      <h2 class="section__title reveal">Comisiones</h2>
+      <div class="commission-cards">
+        <div class="commission-card reveal">
+          <div class="commission-card__badge">Intro</div>
+          <div class="commission-card__percent">15%</div>
+          <div class="commission-card__period">del revenue mensual · 12 meses</div>
+          <p class="commission-card__desc">Pasas el contacto, nosotros hacemos el resto.</p>
+          <div class="commission-card__example">
+            <strong>Ejemplo:</strong> un cliente que gasta €2.000/mes → tú ganas <strong>€300/mes</strong> → <strong>€3.600</strong> en un año.
+          </div>
+        </div>
+        <div class="commission-card commission-card--featured reveal">
+          <div class="commission-card__badge">Co-Sell</div>
+          <div class="commission-card__percent">30%</div>
+          <div class="commission-card__period">del revenue mensual · 12 meses</div>
+          <p class="commission-card__desc">Participas en la primera reunión o ayudas activamente en el proceso.</p>
+          <div class="commission-card__example">
+            <strong>Ejemplo:</strong> un cliente que gasta €2.000/mes → tú ganas <strong>€600/mes</strong> → <strong>€7.200</strong> en un año.
+          </div>
+        </div>
+      </div>
+      <p class="commission-footnote reveal">No son dos perfiles diferentes. Es la misma persona que, deal a deal, decide cuánto se involucra.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5. PARA QUIÉN ===== -->
+  <section class="section section--dark">
+    <div class="section__inner">
+      <p class="section__label reveal">El perfil</p>
+      <h2 class="section__title reveal">Para quién es este programa</h2>
+      <p class="reveal" style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 1rem;">Eres un buen fit si:</p>
+      <ul class="fit-list">
+        <li class="reveal">Eres socio o directivo en una firma de headhunting o selección</li>
+        <li class="reveal">Diriges o trabajas en una consultora de RRHH</li>
+        <li class="reveal">Tienes una red activa de directores de Talent Acquisition o HR</li>
+        <li class="reveal">Eres un influencer o creador de contenido en el espacio de recruitment</li>
+        <li class="reveal">Tienes relaciones con empresas que contratan con alto volumen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 6. POR QUÉ RECOMENDAR ===== -->
+  <section class="section section--light">
+    <div class="section__inner">
+      <p class="section__label reveal">La oportunidad</p>
+      <h2 class="section__title reveal">Por qué recomendar Hirevoice</h2>
+      <div class="reasons">
+        <div class="reason reveal">
+          <h3 class="reason__title">Fácil de recomendar</h3>
+          <p class="reason__desc">Producto en producción con clientes enterprise activos y miles de entrevistas completadas. No es un slide deck — es software que ya da resultados.</p>
+        </div>
+        <div class="reason reveal">
+          <h3 class="reason__title">Fácil de explicar</h3>
+          <p class="reason__desc">"Un entrevistador con IA que habla con candidatos por videollamada y genera un informe con scores." Tu contacto lo entiende en una frase.</p>
+        </div>
+        <div class="reason reveal">
+          <h3 class="reason__title">Fácil de cerrar</h3>
+          <p class="reason__desc">Fundado por Nacho González-Barros, creador de InfoJobs. Cobertura en prensa nacional. Cuando tu contacto busque "Hirevoice", le va a gustar lo que encuentre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. CTA FINAL ===== -->
+  <section class="section section--dark cta-final">
+    <div class="section__inner">
+      <h2 class="section__title reveal">¿Listo para empezar?</h2>
+      <p class="cta-final__text reveal">Escríbenos. Te explicamos el programa en 15 minutos y te damos acceso a materiales, una demo personalizada y tu enlace de referral.</p>
+      <a href="mailto:leo@hirevoice.com?subject=Quiero%20ser%20Hirevoice%20Ambassador" class="btn btn--large reveal">Contactar ahora</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    &copy; 2026 Hirevoice · <a href="https://hirevoice.com" target="_blank" rel="noopener">hirevoice.com</a>
+  </footer>
+
+  <!-- ===== SCROLL ANIMATIONS ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function(el, i) {
+        // Stagger siblings slightly
+        var parent = el.parentElement;
+        var siblings = parent.querySelectorAll('.reveal');
+        var index = Array.prototype.indexOf.call(siblings, el);
+        el.style.transitionDelay = (index * 0.1) + 's';
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
