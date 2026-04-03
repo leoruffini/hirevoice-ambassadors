@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hirevoice Ambassadors — Programa de Referidos</title>
+  <meta name="description" content="Programa de ambassadors de Hirevoice: recomienda la plataforma de entrevistas con IA y gana comisiones recurrentes por cada cliente referido.">
+  <meta property="og:title" content="Hirevoice Ambassadors — Programa de Referidos">
+  <meta property="og:description" content="Recomienda la tecnología de entrevistas con IA de Hirevoice y gana comisiones recurrentes por cada cliente que traigas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hirevoice.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hirevoice Ambassadors — Programa de Referidos">
+  <meta name="twitter:description" content="Recomienda Hirevoice, la tecnología de entrevistas con IA, y gana comisiones recurrentes.">
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
@@ -81,13 +92,13 @@
     /* ========================================
        ANIMATIONS
     ======================================== */
-    .reveal {
+    .js .reveal {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .reveal.visible {
+    .js .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -111,6 +122,14 @@
     .btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(11, 52, 183, 0.4);
+    }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid var(--blue-light);
+      outline-offset: 4px;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
     }
 
     .btn--large {
@@ -493,9 +512,9 @@
       <div class="hero__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="195 339 802 220"><defs><style>.cls-1{fill:#0b34b7;}</style></defs><polygon class="cls-1" points="283.94 404.09 225.87 404.09 225.87 350.84 199.82 350.84 199.82 482.04 225.87 482.04 225.87 425.32 283.94 425.32 283.94 482.04 309.79 482.04 309.79 350.84 283.94 350.84 283.94 404.09"/><rect class="cls-1" x="329.48" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="329.48" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M396.62,393.67v-15.05h-24.7v103.41h24.7v-54.99c0-17.17,8.3-28.36,27.01-28.36,4.44,0,8.1.39,11.38,1.35v-21.42c-1.93-1.74-5.79-2.89-10.03-2.89-11.19,0-21.61,5.59-28.36,17.94Z"/><path class="cls-1" d="M486.92,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM485.95,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><polygon class="cls-1" points="602.88 482.04 640.11 378.62 614.84 378.62 590.91 451.55 588.41 462.75 585.71 451.55 561.78 378.62 535.16 378.62 572.39 482.04 602.88 482.04"/><rect class="cls-1" x="753.37" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="753.37" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M840.58,464.48c-15.63,0-24.12-12.16-24.12-33.96s8.1-34.34,23.35-34.34c10.42,0,18.52,5.59,20.84,19.1h24.7c-3.47-26.43-22-39.55-45.53-39.55-29.71,0-48.81,19.68-48.81,54.79s18.52,54.41,49.01,54.41c23.35,0,41.48-12.15,46.11-38.01h-24.89c-2.51,11.77-10.03,17.56-20.64,17.56Z"/><path class="cls-1" d="M944,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM943.03,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><path class="cls-1" d="M690.96,375.5c-20.78,0-36.5,9.39-44.25,26.76-3.53,7.83-5.44,17.3-5.44,28.27s1.88,19.94,5.4,27.73c1.3,2.88,2.05,6.02,2.07,9.18.03,4.48-1.21,8.93-3.79,12.78h0c-4.86,7.27-12.57,12.12-21.22,13.42-1.89.28-3.8.75-5.75,1.41-8.74,2.97-15.69,9.92-18.48,18.71-7.76,24.42,14.47,46.58,38.9,38.69,8.77-2.83,15.76-9.77,18.63-18.53,2.24-6.84,2.13-13.5.27-19.39-.9-2.86-1.41-5.85-1.07-8.83,1.19-10.66,8.28-18.19,17-20.73,2.93-.85,6.03-1.03,9.05-.6,2.74.38,5.6.58,8.57.58,21.5,0,37.61-10.17,44.97-28.79,2.94-7.33,4.52-15.98,4.52-25.85,0-33.96-18.91-54.79-49.39-54.79Z"/></svg></div>
     </nav>
     <div class="hero__inner">
-      <h1 class="hero__title reveal">Hirevoice<br>Ambassadors</h1>
-      <p class="hero__subtitle reveal">Recomienda la mejor tecnología de entrevistas con IA. Gana comisiones recurrentes por cada cliente que traigas.</p>
-      <a href="mailto:leo@hirevoice.com?subject=Ambassador%20Program" class="btn reveal">Quiero ser Ambassador</a>
+      <h1 class="hero__title reveal visible">Hirevoice<br>Ambassadors</h1>
+      <p class="hero__subtitle reveal visible">Recomienda la mejor tecnología de entrevistas con IA. Gana comisiones recurrentes por cada cliente que traigas.</p>
+      <a href="mailto:leo@hirevoice.com?subject=Ambassador%20Program" class="btn reveal visible">Quiero ser Ambassador</a>
     </div>
   </section>
 
@@ -652,7 +671,7 @@
         rootMargin: '0px 0px -40px 0px'
       });
 
-      reveals.forEach(function(el, i) {
+      reveals.forEach(function(el) {
         // Stagger siblings slightly
         var parent = el.parentElement;
         var siblings = parent.querySelectorAll('.reveal');
