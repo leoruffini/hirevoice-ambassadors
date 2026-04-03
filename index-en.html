@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hirevoice Ambassadors - Referral Program</title>
+  <meta name="description" content="Hirevoice Ambassadors program: recommend the AI interview platform and earn recurring commissions for every client you refer.">
+  <meta property="og:title" content="Hirevoice Ambassadors - Referral Program">
+  <meta property="og:description" content="Recommend Hirevoice's AI interview technology and earn recurring commissions for every client you bring in.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hirevoice.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hirevoice Ambassadors - Referral Program">
+  <meta name="twitter:description" content="Recommend Hirevoice, the AI interview technology, and earn recurring commissions.">
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@700,500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0B34B7;
+      --blue-light: #3B5FD9;
+      --dark: #0A0A0A;
+      --white: #FFFFFF;
+      --text: #1A1A1A;
+      --text-secondary: #6B7280;
+      --radius: 8px;
+      --max-w: 1080px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Switzer', Arial, Helvetica, sans-serif;
+      line-height: 1.15;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .section {
+      padding: 5rem 1.5rem;
+    }
+
+    .section--dark {
+      background: var(--dark);
+      background-image: radial-gradient(ellipse at 60% 50%, rgba(11, 52, 183, 0.6) 0%, rgba(11, 52, 183, 0.2) 40%, transparent 70%);
+      color: var(--white);
+    }
+
+    .section--light {
+      background: var(--white);
+      color: var(--text);
+    }
+
+    .section__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .section__label {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0.6;
+    }
+
+    .section__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+    }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .js .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 1rem 2.5rem;
+      border-radius: var(--radius);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      letter-spacing: -0.01em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(11, 52, 183, 0.4);
+    }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid var(--blue-light);
+      outline-offset: 4px;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .btn--large {
+      font-size: 1.15rem;
+      padding: 1.15rem 3rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      background: var(--dark);
+      background-image: radial-gradient(ellipse at 60% 50%, rgba(11, 52, 183, 0.6) 0%, rgba(11, 52, 183, 0.2) 40%, transparent 70%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 2rem;
+    }
+
+    .hero__logo svg {
+      height: 28px;
+      width: auto;
+    }
+
+    .hero__logo svg .cls-1 {
+      fill: var(--white);
+    }
+
+    .hero__inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero__title {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 640px;
+      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .what__subtitle {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      max-width: 720px;
+      margin-bottom: 3rem;
+      color: var(--text-secondary);
+    }
+
+    .what-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .what-card {
+      padding: 2rem 0;
+      border-top: 2px solid #E5E7EB;
+    }
+
+    .what-card__number {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .what-card__title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+
+    .what-card__desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .step__number {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--blue-light);
+      line-height: 1;
+      margin-bottom: 1rem;
+      opacity: 0.7;
+    }
+
+    .step__title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .step__desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .commissions .section__title {
+      text-align: center;
+    }
+
+    .commission-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .commission-card {
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .commission-card:hover {
+      border-color: var(--blue);
+      box-shadow: 0 8px 40px rgba(11, 52, 183, 0.1);
+    }
+
+    .commission-card--featured {
+      border-color: var(--blue);
+      background: linear-gradient(135deg, rgba(11, 52, 183, 0.03) 0%, rgba(11, 52, 183, 0.08) 100%);
+    }
+
+    .commission-card__badge {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+
+    .commission-card__percent {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: clamp(4rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .commission-card__period {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .commission-card__desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .commission-card__example {
+      background: #F3F4F6;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .commission-card__example strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .commission-footnote {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fit-list {
+      list-style: none;
+      margin-top: 2.5rem;
+      max-width: 720px;
+    }
+
+    .fit-list li {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .fit-list li::before {
+      content: '-';
+      color: var(--blue-light);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .reason {
+      padding: 2rem 0;
+      border-top: 2px solid #E5E7EB;
+    }
+
+    .reason__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .reason__desc {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    .cta-final {
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+
+    .cta-final .section__title {
+      margin-bottom: 1rem;
+    }
+
+    .cta-final__text {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .footer {
+      background: #000000;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 3rem 1.5rem 2rem;
+    }
+
+    .footer__inner {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .footer__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 3.25rem;
+      min-width: 240px;
+    }
+
+    .footer__logo svg {
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .footer__logo svg .cls-1 {
+      fill: var(--white);
+    }
+
+    .footer__social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    .footer__social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      opacity: 0.92;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .footer__social a:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    .footer__social svg {
+      width: 23px;
+      height: 23px;
+      display: block;
+    }
+
+    .footer__nav {
+      min-width: 180px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .footer__nav-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.75rem;
+    }
+
+    .footer__nav-label {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.52);
+      letter-spacing: -0.01em;
+    }
+
+    .footer__nav-link {
+      font-family: 'Switzer', Arial, sans-serif;
+      font-size: 1.05rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+
+    .footer__divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.72);
+      margin-bottom: 2rem;
+    }
+
+    .footer__bottom {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) auto auto auto;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer__copyright {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.82);
+      white-space: nowrap;
+    }
+
+    .footer__legal {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+      font-size: 0.95rem;
+    }
+
+    .footer__legal a {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .footer__certifications {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .footer__certification {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+    }
+
+    .footer__certification img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .footer__grant {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .footer__grant img {
+      width: 205px;
+      max-width: 100%;
+      display: block;
+    }
+
+    .footer a {
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .footer a:hover {
+      color: var(--white);
+      opacity: 1;
+    }
+
+    .footer a:focus-visible {
+      outline: 3px solid rgba(255, 255, 255, 0.9);
+      outline-offset: 4px;
+      text-decoration: none;
+    }
+
+    .footer__legal a:focus-visible,
+    .footer__nav-link:focus-visible,
+    .footer__social a:focus-visible,
+    .footer__grant:focus-visible,
+    .footer__certification:focus-visible {
+      border-radius: 999px;
+    }
+
+    .footer__legal a,
+    .footer__nav-link,
+    .footer__copyright {
+      line-height: 1.3;
+    }
+
+    .footer__legal,
+    .footer__social {
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .footer__nav-group,
+    .footer__brand {
+      margin: 0;
+    }
+
+    .footer__copyright,
+    .footer__grant,
+    .footer__certifications {
+      min-width: 0;
+    }
+
+    .footer__nav-link,
+    .footer__legal a,
+    .footer__grant {
+      white-space: nowrap;
+    }
+
+    .footer__top,
+    .footer__bottom {
+      width: 100%;
+    }
+
+    .footer__legal li,
+    .footer__social li {
+      list-style: none;
+    }
+
+    .footer__social a,
+    .footer__certification,
+    .footer__grant {
+      flex-shrink: 0;
+    }
+
+    .footer__bottom,
+    .footer__top,
+    .footer__brand,
+    .footer__nav {
+      position: relative;
+    }
+
+    .footer__nav-link,
+    .footer__legal a,
+    .footer__copyright {
+      font-weight: 400;
+    }
+
+    .footer__nav-link {
+      font-size: 0.98rem;
+    }
+
+    .footer__social a,
+    .footer__grant,
+    .footer__certification {
+      opacity: 0.9;
+    }
+
+    .footer__grant:hover,
+    .footer__certification:hover {
+      opacity: 1;
+    }
+
+    .footer__grant,
+    .footer__certification,
+    .footer__nav-link,
+    .footer__legal a {
+      color: var(--white);
+    }
+
+    .footer__certification,
+    .footer__grant {
+      text-decoration: none;
+    }
+
+    .footer__top + .footer__divider + .footer__bottom {
+      padding-top: 0;
+    }
+
+    .footer__nav-label,
+    .footer__copyright,
+    .footer__legal a {
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 3.5rem 1.25rem; }
+
+      .hero { padding: 6rem 1.25rem 3rem; min-height: 90vh; }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .commission-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .what-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .reasons {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .commission-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .step__number { font-size: 3.5rem; }
+
+      .footer {
+        padding: 2.5rem 1.25rem 1.75rem;
+      }
+
+      .footer__top,
+      .footer__bottom {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 1.75rem;
+      }
+
+      .footer__brand {
+        gap: 2rem;
+      }
+
+      .footer__nav {
+        justify-content: flex-start;
+      }
+
+      .footer__nav-group {
+        gap: 1rem;
+      }
+
+      .footer__divider {
+        margin-bottom: 1.75rem;
+      }
+
+      .footer__legal {
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+      }
+
+      .footer__copyright {
+        order: 1;
+      }
+
+      .footer__legal {
+        order: 2;
+      }
+
+      .footer__certifications {
+        order: 3;
+      }
+
+      .footer__grant {
+        order: 4;
+        justify-content: flex-start;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hero__title { font-size: 3.5rem; }
+
+      .footer__bottom {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+
+      .footer__grant {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <nav class="hero__nav">
+      <div class="hero__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="195 339 802 220"><defs><style>.cls-1{fill:#0b34b7;}</style></defs><polygon class="cls-1" points="283.94 404.09 225.87 404.09 225.87 350.84 199.82 350.84 199.82 482.04 225.87 482.04 225.87 425.32 283.94 425.32 283.94 482.04 309.79 482.04 309.79 350.84 283.94 350.84 283.94 404.09"/><rect class="cls-1" x="329.48" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="329.48" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M396.62,393.67v-15.05h-24.7v103.41h24.7v-54.99c0-17.17,8.3-28.36,27.01-28.36,4.44,0,8.1.39,11.38,1.35v-21.42c-1.93-1.74-5.79-2.89-10.03-2.89-11.19,0-21.61,5.59-28.36,17.94Z"/><path class="cls-1" d="M486.92,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM485.95,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><polygon class="cls-1" points="602.88 482.04 640.11 378.62 614.84 378.62 590.91 451.55 588.41 462.75 585.71 451.55 561.78 378.62 535.16 378.62 572.39 482.04 602.88 482.04"/><rect class="cls-1" x="753.37" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="753.37" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M840.58,464.48c-15.63,0-24.12-12.16-24.12-33.96s8.1-34.34,23.35-34.34c10.42,0,18.52,5.59,20.84,19.1h24.7c-3.47-26.43-22-39.55-45.53-39.55-29.71,0-48.81,19.68-48.81,54.79s18.52,54.41,49.01,54.41c23.35,0,41.48-12.15,46.11-38.01h-24.89c-2.51,11.77-10.03,17.56-20.64,17.56Z"/><path class="cls-1" d="M944,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM943.03,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><path class="cls-1" d="M690.96,375.5c-20.78,0-36.5,9.39-44.25,26.76-3.53,7.83-5.44,17.3-5.44,28.27s1.88,19.94,5.4,27.73c1.3,2.88,2.05,6.02,2.07,9.18.03,4.48-1.21,8.93-3.79,12.78h0c-4.86,7.27-12.57,12.12-21.22,13.42-1.89.28-3.8.75-5.75,1.41-8.74,2.97-15.69,9.92-18.48,18.71-7.76,24.42,14.47,46.58,38.9,38.69,8.77-2.83,15.76-9.77,18.63-18.53,2.24-6.84,2.13-13.5.27-19.39-.9-2.86-1.41-5.85-1.07-8.83,1.19-10.66,8.28-18.19,17-20.73,2.93-.85,6.03-1.03,9.05-.6,2.74.38,5.6.58,8.57.58,21.5,0,37.61-10.17,44.97-28.79,2.94-7.33,4.52-15.98,4.52-25.85,0-33.96-18.91-54.79-49.39-54.79Z"/></svg></div>
+    </nav>
+    <div class="hero__inner">
+      <h1 class="hero__title reveal visible">Hirevoice<br>Ambassadors</h1>
+      <p class="hero__subtitle reveal visible">Recommend the best AI interview technology. Earn recurring commissions for every client you bring in.</p>
+      <a href="mailto:leo@hirevoice.com?subject=Ambassador%20Program" class="btn reveal visible">I want to become an Ambassador</a>
+    </div>
+  </section>
+
+  <section class="section section--light what">
+    <div class="section__inner">
+      <p class="section__label reveal">The product</p>
+      <h2 class="section__title reveal">What Hirevoice Does</h2>
+      <p class="what__subtitle reveal">An AI conversational interview agent for any role.</p>
+      <div class="what-cards">
+        <div class="what-card reveal">
+          <div class="what-card__number">01</div>
+          <h3 class="what-card__title">Real interviews, not questionnaires</h3>
+          <p class="what-card__desc">Adaptive conversations over Google Meet, Teams, or phone. Follow-up questions, deeper probing, up to 40 minutes. No two interviews are the same.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">02</div>
+          <h3 class="what-card__title">Full reports for recruiters</h3>
+          <p class="what-card__desc">Competency scores, detailed explanations for every hard and soft skill assessed, and inconsistency alerts.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">03</div>
+          <h3 class="what-card__title">White-collar and blue-collar</h3>
+          <p class="what-card__desc">From senior developers to high-volume operational roles. One client is closing 6,000 positions a year with Hirevoice.</p>
+        </div>
+        <div class="what-card reveal">
+          <div class="what-card__number">04</div>
+          <h3 class="what-card__title">Fast implementation</h3>
+          <p class="what-card__desc">Compatible with any ATS. Contact candidates by email, WhatsApp, or direct link. Live in days, not months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section__inner">
+      <p class="section__label reveal">The process</p>
+      <h2 class="section__title reveal">How It Works</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step__number">1</div>
+          <h3 class="step__title">Refer</h3>
+          <p class="step__desc">Introduce Hirevoice to companies in your network that hire at scale. You only need to make the intro.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__number">2</div>
+          <h3 class="step__title">We close</h3>
+          <p class="step__desc">Our team handles the demo, pilot, and close. You choose how involved you want to be.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step__number">3</div>
+          <h3 class="step__title">Get paid monthly</h3>
+          <p class="step__desc">Receive monthly commissions based on the client's actual usage. No limit on referrals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" id="commissions">
+    <div class="section__inner">
+      <p class="section__label reveal" style="text-align:center;">What you earn</p>
+      <h2 class="section__title reveal">Commissions</h2>
+      <div class="commission-cards">
+        <div class="commission-card reveal">
+          <div class="commission-card__badge">Intro</div>
+          <div class="commission-card__percent">10%</div>
+          <div class="commission-card__period">of monthly revenue &middot; 12 months</div>
+          <p class="commission-card__desc">You introduce the contact and we handle the full sales process - demo, proposal, negotiation, and close. That's all we need from you.</p>
+          <div class="commission-card__example">
+            <strong>Example:</strong> a client spending EUR 2,000/month &rarr; you earn <strong>EUR 200/month</strong> &rarr; <strong>EUR 2,400</strong> in one year.
+          </div>
+        </div>
+        <div class="commission-card commission-card--featured reveal">
+          <div class="commission-card__badge">Co-Sell</div>
+          <div class="commission-card__percent">20%</div>
+          <div class="commission-card__period">of monthly revenue &middot; 12 months</div>
+          <p class="commission-card__desc">You take an active role in the process: you join the first call, help frame the client's needs, and push internally when needed. Your credibility helps accelerate the close.</p>
+          <div class="commission-card__example">
+            <strong>Example:</strong> a client spending EUR 2,000/month &rarr; you earn <strong>EUR 400/month</strong> &rarr; <strong>EUR 4,800</strong> in one year.
+          </div>
+        </div>
+      </div>
+      <p class="commission-footnote reveal">You decide how involved you want to be in each deal.</p>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="section__inner">
+      <p class="section__label reveal">The profile</p>
+      <h2 class="section__title reveal">Who This Program Is For</h2>
+      <p class="reveal" style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 1rem;">This is you if:</p>
+      <ul class="fit-list">
+        <li class="reveal">You are a partner or executive at an executive search or recruiting firm</li>
+        <li class="reveal">You lead or work at an HR consultancy</li>
+        <li class="reveal">You have an active network of Talent Acquisition or HR leaders</li>
+        <li class="reveal">You are an influencer or content creator in the recruiting space</li>
+        <li class="reveal">You have relationships with companies hiring at scale</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="section__inner">
+      <p class="section__label reveal">The opportunity</p>
+      <h2 class="section__title reveal">Why Recommend Hirevoice</h2>
+      <div class="reasons">
+        <div class="reason reveal">
+          <h3 class="reason__title">Easy to recommend</h3>
+          <p class="reason__desc">A product already in production with active enterprise clients and thousands of completed interviews. This is AI that is already delivering results.</p>
+        </div>
+        <div class="reason reveal">
+          <h3 class="reason__title">Easy to explain</h3>
+          <p class="reason__desc">An AI interviewer that speaks with candidates over video call and generates a scored report. Your contact gets it in one sentence.</p>
+        </div>
+        <div class="reason reveal">
+          <h3 class="reason__title">Easy to close</h3>
+          <p class="reason__desc">Founded by Nacho Gonzalez-Barros, creator of InfoJobs. Covered by national media. When your contact searches for "Hirevoice," they will like what they find.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark cta-final">
+    <div class="section__inner">
+      <h2 class="section__title reveal">Ready to get started?</h2>
+      <p class="cta-final__text reveal">Let's talk. We will explain the program in 15 minutes and give you access to materials, a personalized demo, and your referral link.</p>
+      <a href="mailto:leo@hirevoice.com?subject=I%20want%20to%20become%20a%20Hirevoice%20Ambassador" class="btn btn--large reveal">Contact now</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__logo" href="https://www.hirevoice.com" target="_blank" rel="noopener" aria-label="Hirevoice">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="195 339 802 220"><defs><style>.cls-1{fill:#0b34b7;}</style></defs><polygon class="cls-1" points="283.94 404.09 225.87 404.09 225.87 350.84 199.82 350.84 199.82 482.04 225.87 482.04 225.87 425.32 283.94 425.32 283.94 482.04 309.79 482.04 309.79 350.84 283.94 350.84 283.94 404.09"/><rect class="cls-1" x="329.48" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="329.48" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M396.62,393.67v-15.05h-24.7v103.41h24.7v-54.99c0-17.17,8.3-28.36,27.01-28.36,4.44,0,8.1.39,11.38,1.35v-21.42c-1.93-1.74-5.79-2.89-10.03-2.89-11.19,0-21.61,5.59-28.36,17.94Z"/><path class="cls-1" d="M486.92,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM485.95,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><polygon class="cls-1" points="602.88 482.04 640.11 378.62 614.84 378.62 590.91 451.55 588.41 462.75 585.71 451.55 561.78 378.62 535.16 378.62 572.39 482.04 602.88 482.04"/><rect class="cls-1" x="753.37" y="378.62" width="24.7" height="103.41"/><rect class="cls-1" x="753.37" y="343.12" width="24.7" height="23.92"/><path class="cls-1" d="M840.58,464.48c-15.63,0-24.12-12.16-24.12-33.96s8.1-34.34,23.35-34.34c10.42,0,18.52,5.59,20.84,19.1h24.7c-3.47-26.43-22-39.55-45.53-39.55-29.71,0-48.81,19.68-48.81,54.79s18.52,54.41,49.01,54.41c23.35,0,41.48-12.15,46.11-38.01h-24.89c-2.51,11.77-10.03,17.56-20.64,17.56Z"/><path class="cls-1" d="M944,484.93c24.7,0,43.22-12.73,48.81-36.66h-26.05c-3.28,11-11.19,16.4-22.77,16.4-15.05,0-23.73-10.42-24.89-29.33h72.93v-5.79c0-33.38-18.72-53.83-49.01-53.83s-49.39,19.68-49.39,54.79,19.1,54.41,50.36,54.41ZM943.03,395.99c12.93,0,20.84,8.49,23.15,23.92h-46.5c2.31-15.63,10.23-23.92,23.34-23.92Z"/><path class="cls-1" d="M690.96,375.5c-20.78,0-36.5,9.39-44.25,26.76-3.53,7.83-5.44,17.3-5.44,28.27s1.88,19.94,5.4,27.73c1.3,2.88,2.05,6.02,2.07,9.18.03,4.48-1.21,8.93-3.79,12.78h0c-4.86,7.27-12.57,12.12-21.22,13.42-1.89.28-3.8.75-5.75,1.41-8.74,2.97-15.69,9.92-18.48,18.71-7.76,24.42,14.47,46.58,38.9,38.69,8.77-2.83,15.76-9.77,18.63-18.53,2.24-6.84,2.13-13.5.27-19.39-.9-2.86-1.41-5.85-1.07-8.83,1.19-10.66,8.28-18.19,17-20.73,2.93-.85,6.03-1.03,9.05-.6,2.74.38,5.6.58,8.57.58,21.5,0,37.61-10.17,44.97-28.79,2.94-7.33,4.52-15.98,4.52-25.85,0-33.96-18.91-54.79-49.39-54.79Z"/></svg>
+          </a>
+          <ul class="footer__social" aria-label="Hirevoice social links">
+            <li>
+              <a href="https://www.twitter.com/hirevoice" target="_blank" rel="noopener" aria-label="X">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-7.38L5.62 22H2.5l7.24-8.27L2.1 2h6.4l4.42 6.78L18.9 2Zm-1.1 18h1.72L7.56 3.89H5.7Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.25 2h9.5A5.25 5.25 0 0 1 22 7.25v9.5A5.25 5.25 0 0 1 16.75 22h-9.5A5.25 5.25 0 0 1 2 16.75v-9.5A5.25 5.25 0 0 1 7.25 2Zm0 1.8A3.45 3.45 0 0 0 3.8 7.25v9.5a3.45 3.45 0 0 0 3.45 3.45h9.5a3.45 3.45 0 0 0 3.45-3.45v-9.5a3.45 3.45 0 0 0-3.45-3.45Zm9.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.85A5.15 5.15 0 1 1 6.85 12 5.15 5.15 0 0 1 12 6.85Zm0 1.8A3.35 3.35 0 1 0 15.35 12 3.36 3.36 0 0 0 12 8.65Z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/hirevoice" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.4 8.7H2.65V21h2.76ZM4.02 3A1.6 1.6 0 1 0 4.05 6.2 1.6 1.6 0 0 0 4.02 3Zm17 10.38c0-3.76-2-5.5-4.67-5.5A4.04 4.04 0 0 0 12.7 9.9V8.7H10.06c.03.8 0 12.3 0 12.3h2.64v-6.87c0-.37.03-.74.14-1 .3-.74.99-1.5 2.14-1.5 1.5 0 2.1 1.13 2.1 2.8V21H21Z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <div class="footer__nav-group">
+            <span class="footer__nav-label">Company</span>
+            <a class="footer__nav-link" href="https://www.hirevoice.com/contact/sales" target="_blank" rel="noopener">Contact</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__divider" aria-hidden="true"></div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Hirevoice S.L. All rights reserved</p>
+        <ul class="footer__legal" aria-label="Legal links">
+          <li><a href="https://www.hirevoice.com/terms" target="_blank" rel="noopener">Terms</a></li>
+          <li><a href="https://www.hirevoice.com/privacy-policy" target="_blank" rel="noopener">Privacy</a></li>
+          <li><a href="https://www.hirevoice.com/cookies-policy" target="_blank" rel="noopener">Cookies</a></li>
+        </ul>
+        <div class="footer__certifications">
+          <a class="footer__certification" href="https://trust.hirevoice.com/" target="_blank" rel="noopener" aria-label="ISO 27001">
+            <img src="https://framerusercontent.com/images/17PgB1M13iv4ZUsMn78OTzSqTo.webp?width=128&amp;height=128" alt="ISO 27001 certification badge">
+          </a>
+          <a class="footer__certification" href="https://trust.hirevoice.com/" target="_blank" rel="noopener" aria-label="GDPR compliant">
+            <img src="https://framerusercontent.com/images/HBvs5k9iDw0Hz7ZOsNQaZx18.webp?width=128&amp;height=128" alt="GDPR compliant badge">
+          </a>
+        </div>
+        <a class="footer__grant" href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener" aria-label="ElevenLabs Grants">
+          <img src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp" alt="ElevenLabs Grants">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      reveals.forEach(function(el) {
+        var parent = el.parentElement;
+        var siblings = parent.querySelectorAll('.reveal');
+        var index = Array.prototype.indexOf.call(siblings, el);
+        el.style.transitionDelay = (index * 0.1) + 's';
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
